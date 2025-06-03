@@ -58,8 +58,11 @@ if "roberta_tokenizer" not in st.session_state or "roberta_model" not in st.sess
     #tokenizer = RobertaTokenizer.from_pretrained('roberta-base')
     #model = RobertaForMaskedLM.from_pretrained('roberta-base')
     # Downloads and caches the model
-    tokenizer = AutoTokenizer.from_pretrained("cl-tohoku/bert-base-japanese")
-    model = AutoModelForMaskedLM.from_pretrained("cl-tohoku/bert-base-japanese")
+    @st.cache_resource
+    def load_model():
+        tokenizer = AutoTokenizer.from_pretrained("xlm-roberta-base")
+        model = AutoModelForQuestionAnswering.from_pretrained("xlm-roberta-base")
+        return tokenizer, model
     model.eval()  # Set the model to evaluation mode
 
     # Store the model and tokenizer in session state
