@@ -68,7 +68,7 @@ if "roberta_tokenizer" not in st.session_state or "roberta_model" not in st.sess
     model = AutoModelForMaskedLM.from_pretrained("ku-nlp/deberta-v2-tiny-japanese")
     model.eval()  # Set the model to evaluation mode
     # Downloads and caches the model
-    tokenizer, model = load_model()
+    #tokenizer, model = load_model()
 
     # Store the model and tokenizer in session state
     st.session_state["roberta_tokenizer"] = tokenizer
