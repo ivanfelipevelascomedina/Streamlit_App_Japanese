@@ -63,7 +63,7 @@ if "roberta_tokenizer" not in st.session_state or "roberta_model" not in st.sess
         tokenizer = AutoTokenizer.from_pretrained("xlm-roberta-base")
         model = AutoModelForQuestionAnswering.from_pretrained("xlm-roberta-base")
         return tokenizer, model
-    model.eval()  # Set the model to evaluation mode
+    #model.eval()  # Set the model to evaluation mode
 
     # Store the model and tokenizer in session state
     st.session_state["roberta_tokenizer"] = tokenizer
