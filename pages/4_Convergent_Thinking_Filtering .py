@@ -9,7 +9,7 @@ from openai import OpenAI
 @st.cache_resource
 def load_model():
     tokenizer = AutoTokenizer.from_pretrained("xlm-roberta-base")
-    model = AutoModelForQuestionAnswering.from_pretrained("xlm-roberta-base")
+    model = AutoModelForMaskedLM.from_pretrained("xlm-roberta-base")
     #model.eval()  # Set the model to evaluation mode
     return tokenizer, model
 
