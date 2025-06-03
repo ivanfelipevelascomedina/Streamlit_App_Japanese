@@ -6,12 +6,12 @@ from XAI_APP_utils import answer_generation, extract_probs_information, substitu
 from transformers import  RobertaForMaskedLM, RobertaTokenizer, BertTokenizer, BertForMaskedLM, AutoTokenizer, AutoModelForMaskedLM, AutoModel
 from openai import OpenAI
 
-@st.cache_resource
-def load_model():
-    tokenizer = AutoTokenizer.from_pretrained("ku-nlp/deberta-v2-tiny-japanese")
-    model = AutoModelForMaskedLM.from_pretrained("ku-nlp/deberta-v2-tiny-japanese")
-    #model.eval()  # Set the model to evaluation mode
-    return tokenizer, model
+#@st.cache_resource
+#def load_model():
+#    tokenizer = AutoTokenizer.from_pretrained("ku-nlp/deberta-v2-tiny-japanese")
+#    model = AutoModelForMaskedLM.from_pretrained("ku-nlp/deberta-v2-tiny-japanese")
+#    #model.eval()  # Set the model to evaluation mode
+#    return tokenizer, model
 
 st.set_page_config(layout="wide")  # Set wide layout for the entire app
 
@@ -64,6 +64,9 @@ if "roberta_tokenizer" not in st.session_state or "roberta_model" not in st.sess
     # Load pre-trained RoBERTa model and tokenizer
     #tokenizer = RobertaTokenizer.from_pretrained('roberta-base')
     #model = RobertaForMaskedLM.from_pretrained('roberta-base')
+    tokenizer = AutoTokenizer.from_pretrained("ku-nlp/deberta-v2-tiny-japanese")
+    model = AutoModelForMaskedLM.from_pretrained("ku-nlp/deberta-v2-tiny-japanese")
+    model.eval()  # Set the model to evaluation mode
     # Downloads and caches the model
     tokenizer, model = load_model()
 
