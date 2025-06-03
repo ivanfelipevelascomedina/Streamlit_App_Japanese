@@ -8,8 +8,8 @@ from openai import OpenAI
 
 @st.cache_resource
 def load_model():
-    tokenizer = AutoTokenizer.from_pretrained("xlm-roberta-base")
-    model = AutoModelForMaskedLM.from_pretrained("xlm-roberta-base")
+    tokenizer = AutoTokenizer.from_pretrained("cl-tohoku/bert-base-japanese")
+    model = AutoModelForMaskedLM.from_pretrained("cl-tohoku/bert-base-japanese")
     #model.eval()  # Set the model to evaluation mode
     return tokenizer, model
 
