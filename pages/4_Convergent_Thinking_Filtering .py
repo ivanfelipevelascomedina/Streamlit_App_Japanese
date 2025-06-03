@@ -53,11 +53,11 @@ st.markdown("""
 # CHECK IF ROBERTA IS ALREADY LOADED IN THE SESSION STATE AND DO IT IN CASE IT IS NOT
 
 @st.cache_resource
-    def load_model():
-        tokenizer = AutoTokenizer.from_pretrained("xlm-roberta-base")
-        model = AutoModelForQuestionAnswering.from_pretrained("xlm-roberta-base")
-        #model.eval()  # Set the model to evaluation mode
-        return tokenizer, model
+def load_model():
+    tokenizer = AutoTokenizer.from_pretrained("xlm-roberta-base")
+    model = AutoModelForQuestionAnswering.from_pretrained("xlm-roberta-base")
+    #model.eval()  # Set the model to evaluation mode
+    return tokenizer, model
 
 if "roberta_tokenizer" not in st.session_state or "roberta_model" not in st.session_state:
     st.write("RoBERTaモデルとトークナイザーを読み込んでいます。数秒かかる場合があります…")
