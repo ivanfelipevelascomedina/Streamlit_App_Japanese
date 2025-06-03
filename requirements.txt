@@ -4,7 +4,7 @@ umap-learn==0.5.7
 hdbscan==0.8.39
 plotly==5.24.1
 pandas==2.2.2
-numpy==1.26.2
+numpy==1.23.5
 openai==1.55.3
 transformers==4.19.2
 torch==2.1.2
