@@ -64,7 +64,7 @@ st.write("""
 """)
 
 # Add an explainatory image
-st.image("images\Simplified_function_behavior_structure.png", caption="Jiao, J., Pang, S., Chu, J., Jing, Y., and Zhao, T., 2021, An Improved FFIP Method Based on Mathematical Logic and SysML, Applied Sciences, 11(8), p. 3534. [Online]. Available: http://dx.doi.org/10.3390/app11083534.", width=400)
+st.image("images/Simplified_function_behavior_structure.png", caption="Jiao, J., Pang, S., Chu, J., Jing, Y., and Zhao, T., 2021, An Improved FFIP Method Based on Mathematical Logic and SysML, Applied Sciences, 11(8), p. 3534. [Online]. Available: http://dx.doi.org/10.3390/app11083534.", width=400)
 
 # How the App Helps
 st.header("このアプリの使い方")
@@ -82,4 +82,4 @@ st.write("""
 """)
 
 # Add an explainatory image
-st.image("images\Design_process_workflow.png", caption="Workflow Overview", use_container_width=True)
+st.image("images/Design_process_workflow.png", caption="Workflow Overview", use_container_width=True)
