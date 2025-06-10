@@ -40,7 +40,7 @@ st.write("""
 """)
 
 # Add an explainatory image
-st.image("images\Convergent_and_Divergent_Thinking.png", caption="Divergent and Convergent thinking for a chair design", use_container_width=True)
+st.image("images/Convergent_and_Divergent_Thinking.png", caption="Divergent and Convergent thinking for a chair design", use_container_width=True)
 
 # FBS Ontology
 st.header("機能–振る舞い–構造（FBS）オントロジーy")
