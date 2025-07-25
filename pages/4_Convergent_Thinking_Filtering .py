@@ -64,8 +64,10 @@ if "roberta_tokenizer" not in st.session_state or "roberta_model" not in st.sess
     # Load pre-trained RoBERTa model and tokenizer
     #tokenizer = RobertaTokenizer.from_pretrained('roberta-base')
     #model = RobertaForMaskedLM.from_pretrained('roberta-base')
-    tokenizer = AutoTokenizer.from_pretrained("ku-nlp/deberta-v2-tiny-japanese")
-    model = AutoModelForMaskedLM.from_pretrained("ku-nlp/deberta-v2-tiny-japanese")
+    #tokenizer = AutoTokenizer.from_pretrained("ku-nlp/deberta-v2-tiny-japanese")
+    #model = AutoModelForMaskedLM.from_pretrained("ku-nlp/deberta-v2-tiny-japanese")
+    tokenizer = AutoTokenizer.from_pretrained("ku-nlp/deberta-v2-tiny-japanese-char-wwm")
+    model = AutoModelForMaskedLM.from_pretrained("ku-nlp/deberta-v2-tiny-japanese-char-wwm")
     model.eval()  # Set the model to evaluation mode
     # Downloads and caches the model
     #tokenizer, model = load_model()
